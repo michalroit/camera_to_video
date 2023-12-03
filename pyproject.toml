@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "camera_to_video"
+version = "0.1.0"
+authors = [
+    {name = "Tamir Roitman", email = "roitman.tamir@gmail.com"},
+]
+description = "Given path to cameras' session, will create video for desired camera numbers"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pydantic",
+    "opencv-python",
+    "rich",
+]
+
+[project.scripts]
+ctv = "camera_to_video.camera_to_video:main"

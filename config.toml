@@ -1,0 +1,18 @@
+[input]
+root_directory = "C:\\full\\path\\to\\directory"
+cameras = ["01", "02"]
+images_ext = "jpg"
+
+[video]
+frames_per_second = 1
+# The fourcc is a standard for image codecs
+# options are listed here https://fourcc.org/codecs.php
+# divx is probably the safest bet
+fourcc = "mp4v"
+# This depends on the codec
+extension = "mp4"
+
+[output]
+root_directory = "C:\\full\\path\\to\\directory"
+video_folder_name = "%d-%m-%y_%H-%M-%S" # read about strftime for more info
+overwrite = false
